@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.NET MAUI en Sportscore Platform</title>
+    <style>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .image-container, .video-container, .team-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .team-member {
+            text-align: center;
+            margin: 0 15px;
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .linkedin-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #0077b5;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+		.center {
+			display: flex;
+            justify-content: center;
+			text-align: center;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hoe kan .NET MAUI worden ingezet voor een cross-platform mobiele applicatie in een sportscore-platform?</h1>
+        
+        <h2>Inleiding</h2>
+        <p>Tijdens een tennistoernooi loopt de planning niet altijd zoals verwacht. Wedstrijden kunnen langer duren dan gepland, wat wachttijden voor spelers veroorzaakt. Dit probleem kan worden verminderd door een platform te ontwikkelen dat live scores van amateurwedstrijden weergeeft. In het project "Tennis Live Scores" wordt een mobiele applicatie gebouwd die gebruikmaakt van .NET MAUI om live scores in te voeren en te ontvangen.</p>
+        
+        <h2>Wat is .NET MAUI?</h2>
+        <p>.NET Multi-platform App UI (MAUI) is een framework van Microsoft voor het ontwikkelen van applicaties die op verschillende besturingssystemen draaien, zoals Android, iOS, Windows en macOS. Het is de opvolger van Xamarin.Forms en biedt ontwikkelaars de mogelijkheid om met één codebase een native ervaring op meerdere platformen te realiseren.</p>
+        
+        <h2>Waarom .NET MAUI voor Tennis Live Scores?</h2>
+        <p>Voor het Tennis Live Scores-project is een mobiele applicatie nodig die zowel op Android als iOS draait en via Bluetooth Low Energy (BLE) kan communiceren met een mechanisch scorebord. .NET MAUI is een geschikte keuze vanwege:</p>
+        <ul>
+            <li>Één codebase voor meerdere platformen: Dit bespaart ontwikkeltijd en onderhoudskosten.</li>
+            <li>Integratie met native API's: Bluetooth-functionaliteiten kunnen eenvoudig worden geïmplementeerd via platform-specifieke code.</li>
+            <li>Ondersteuning voor moderne UI/UX-componenten: Een dynamisch en responsief dashboard voor live scores kan eenvoudig worden gerealiseerd.</li>
+        </ul>
+        
+        <h2>Implementatie van de Tennis Live Scores-applicatie met .NET MAUI</h2>
+        <h3>1. Opzetten van het project</h3>
+        <p>Het project wordt opgezet in Visual Studio met .NET MAUI. De app wordt ontwikkeld als een hybride mobiele applicatie die zowel handmatige score-invoer als automatische synchronisatie met een scorebord ondersteunt.</p>
+        
+        <h3>2. Bluetooth Low Energy-ondersteuning</h3>
+        <p>De mobiele applicatie moet via BLE communiceren met het mechanische scorebord. Dit wordt mogelijk gemaakt door:</p>
+        <ul>
+            <li>Gebruik van .NET MAUI Essentials voor toegang tot native Bluetooth-functionaliteiten.</li>
+            <li>Platform-specifieke aanpassingen via dependency services.</li>
+        </ul>
+        
+        <h3>3. UI-ontwerp en functionaliteiten</h3>
+        <p>De belangrijkste UI-elementen van de app omvatten:</p>
+        <ul>
+            <li>Live Score Dashboard: Een overzicht van lopende wedstrijden met real-time updates.</li>
+            <li>Manuele invoer: Spelers kunnen scores handmatig invoeren via een intuïtieve interface.</li>
+            <li>Delen van scores: Mogelijkheid om een link te genereren om scores te delen via WhatsApp of andere platformen.</li>
+        </ul>
+        
+        <h3>4. Integratie met de webapplicatie</h3>
+        <p>De mobiele applicatie communiceert met een ASP.NET-webapplicatie om scores te synchroniseren. Dit wordt gerealiseerd via RESTful API's die JSON-gegevens verwerken.</p>
+		<div class="image-container">
+            <img src="foto.png" alt="Integratie met webapplicatie" style="max-width:80%; height:auto;">
+        </div>
+        
+        <h2>Voordelen en uitdagingen van .NET MAUI</h2>
+        <h3>Voordelen:</h3>
+        <ul>
+            <li>Snellere ontwikkeling: Dankzij de gedeelde codebase en de ingebouwde ondersteuning voor verschillende platformen.</li>
+            <li>Gebruik van C# en .NET: Dit maakt integratie met bestaande Microsoft-technologieën eenvoudiger.</li>
+            <li>Flexibiliteit: Mogelijkheid om zowel native als platformonafhankelijke UI-componenten te gebruiken.</li>
+        </ul>
+        
+        <h3>Uitdagingen:</h3>
+        <ul>
+            <li>Relatief nieuwe technologie: .NET MAUI is nog in ontwikkeling, wat kan leiden tot compatibiliteitsproblemen.</li>
+            <li>Beperkte BLE-ondersteuning: Vereist extra configuratie voor stabiele communicatie met hardware.</li>
+        </ul>
+        
+        <h2>Conclusie</h2>
+        <p>.NET MAUI biedt een krachtige en efficiënte oplossing voor de ontwikkeling van de Tennis Live Scores-applicatie. Dankzij de mogelijkheid om een enkele codebase te gebruiken voor Android en iOS, de integratie met native functionaliteiten zoals BLE en de sterke ondersteuning voor UI-ontwikkeling, is .NET MAUI een uitstekende keuze voor sportscore-applicaties. Ondanks enkele uitdagingen biedt het framework de flexibiliteit en prestaties die nodig zijn voor een toekomstbestendig platform.</p>
+        
+        <h2>Toekomstige verbeteringen</h2>
+        <p>Om de functionaliteit verder te optimaliseren, kan in de toekomst worden onderzocht hoe AI-gestuurde voorspellingen van wedstrijdduur en machine learning-modellen kunnen bijdragen aan een betere gebruikservaring. Daarnaast kan de integratie met cloudservices zoals Azure IoT verder worden ontwikkeld voor een verbeterde synchronisatie met scoreborden.</p>
+		
+		<h2 class="center">Promo Video</h2>
+		<div class="video-container">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/7f3Qwifd6eE?si=MPWvXfSb-23f4Wmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+		
+		<h2 class="center">Ons Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQFmCN2ZFcukxw/profile-displayphoto-shrink_400_400/B4EZW7ATnuGYAg-/0/1742599175396?e=1748476800&v=beta&t=bqW8fD8qbyWZOyB7ygvdQqNhCkY75xgzJA6q4nQ_fVk" alt="Teamlid 1">
+                <h3>Sofiane Azirar</h3>
+                <a href="https://www.linkedin.com/in/sofiane-azirar-458666273/" class="linkedin-button" target="_blank">LinkedIn</a>
+            </div>
+            <div class="team-member">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQEXVWT0VFdY6g/profile-displayphoto-shrink_800_800/B56ZVsNMD.HQAc-/0/1741277151984?e=1748476800&v=beta&t=4DORDp0BpUKUPiywCbeQd2H9Rd5TcMYyssw6QxAxjAs" alt="Teamlid 2">
+                <h3>Altin Reçica</h3>
+                <a href="https://www.linkedin.com/in/altin-re%C3%A7ica-984299348/" class="linkedin-button" target="_blank">LinkedIn</a>
+            </div>
+            <div class="team-member">
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQHINswOEKRRzw/profile-displayphoto-shrink_800_800/B4EZSFb_.DGYAc-/0/1737405497962?e=1748476800&v=beta&t=Yxk2-UNzbtf1Do5e2aR2m34nZWrJHhFHYLGJ7DnEBmI" alt="Teamlid 3">
+                <h3> Robin Grges</h3>
+                <a href="https://www.linkedin.com/in/robin-grges-5966922b7/" class="linkedin-button" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
